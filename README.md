@@ -13,7 +13,7 @@ this product attempts to capture the current process of booking engineers and te
 
 ## Sample Images
 
-# Dashboard
+# Dashboard :house:
 ![Dahsboard](https://user-images.githubusercontent.com/53438581/102014466-85f1be00-3d2c-11eb-8485-3750709d8cd9.PNG)
 
 # Employees List
