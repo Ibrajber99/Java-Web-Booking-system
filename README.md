@@ -11,7 +11,7 @@ the Back-end is done using Java and Servlets
 for the front-end, it uses HTML,CSS,BOOTSTRAP,JQuery and JavaScript
 
 ## dependencies
-1-Sql script for the DDLs and the Storted Procedures
+1-Sql script for the DDLs
 2-Exisitng instance of the database you can change the connection string in ConnectionFactory class
 
 ## Sample Images
