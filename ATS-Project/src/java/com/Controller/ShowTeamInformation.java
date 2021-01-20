@@ -53,7 +53,7 @@ public class ShowTeamInformation extends HttpServlet {
         canSetTeamOnCall = false;
 
         //If team on Call is not found
-        if (teamService.getTeamOnCall() == null || teamService.getTeamOnCall().getTeamID().equals("")) {
+        if ((teamService.getTeamOnCall().getTeamID()).equals("")) {
             canSetTeamOnCall = true;
         }
 
