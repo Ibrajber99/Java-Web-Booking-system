@@ -262,13 +262,15 @@ public class SqlTeam implements ISqlTeam {
         ITeam teamOnCall = TeamFactory.createInstance();
 
         try {
-            PreparedStatement st = con.prepareStatement("CALL GET_TEAM_ON_CALL");
+             PreparedStatement st = con.prepareStatement("CALL GET_TEAM_ON_CALL");
             ResultSet rs = st.executeQuery();
 
             if (rs.next()) {
                 teamOnCall = getTeamFromRS(rs);
+                setIndividualTeamMembers(teamOnCall);
             }
-            setIndividualTeamMembers(teamOnCall);
+           
+            return teamOnCall;
             
         } catch (SQLException e) {
             System.out.print(e.toString());
