@@ -215,8 +215,20 @@ public class TeamService implements ITeamService {
     @Override
     public boolean canArchiveTeam(String id) {
         try {
+            boolean isOnCall = true;
+            ITeam tmpTeam = teamRepo.getTeamOnCall();
+            
+            if(tmpTeam == null){
+                isOnCall = false;
+                
+            }else{
+               isOnCall = tmpTeam.getTeamID().equals(id);
+               
+            }
+            
+           
             return teamRepo.getFutureTeamJobCount(id) == 0
-                    && !teamRepo.getTeamOnCall().getTeamID().equals(id);
+                    && !isOnCall;
         } catch (SQLException ex) {
 
         }
